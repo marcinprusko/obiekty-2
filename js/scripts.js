@@ -1,28 +1,20 @@
 ﻿// plik scripts.js
 
 function Button(text) {
-	this.text = text || ‘Hello’;
+	this.text = text || Hello;
 }
-
 Button.prototype = {
 	create: function() {
-		this.$element = $(‘<button>’);
+		var self = this;
+		this.$element = $('button');
 		this.$element.text(this.text);
+		this.$element.click(function() {
+			alert(self.text);
+		});
+		$('body').append(this.$element);
 	}
 }
-this.$element.click(function() {
-	alert(self.text);
-});
-create: function() {
-	var self = this;
-	this.$element = $(‘<button>’);
-	this.$element.text(this.text);
-	this.$element.click(function() {
-		alert(self.text);
-	$(‘body’).append(this.$element);
-	var btn1 = new Button(‘Hello!’);
-	});
-}
+var btn1 = new Button('Hello!');
 btn1.create();
 
 
