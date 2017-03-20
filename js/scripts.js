@@ -1,12 +1,12 @@
-﻿// plik scripts.js
+// plik scripts.js
 
 function Button(text) {
-	this.text = text || Hello;
+	this.text = text || 'Hello';
 }
 Button.prototype = {
 	create: function() {
 		var self = this;
-		this.$element = $('button');
+		this.$element = $('<button>');
 		this.$element.text(this.text);
 		this.$element.click(function() {
 			alert(self.text);
